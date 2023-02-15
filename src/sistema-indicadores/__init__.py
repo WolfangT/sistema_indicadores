@@ -5,7 +5,7 @@ Application starting point
 
 import importlib.metadata
 
-_DISTRIBUTION_METADATA = importlib.metadata.metadata('MyProjectName')
+_DISTRIBUTION_METADATA = importlib.metadata.metadata('sistema-indicadores')
 
 print("hello world!")
 print("Data:")

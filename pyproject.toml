@@ -5,7 +5,7 @@ description = "Sistema para control de recursos, actividades y muestra de indica
 authors = ["Wolfang Torres <wolfang.torres@gmail.com>"]
 license = "GPL-3.0-or-later"
 readme = "README.md"
-packages = [{include = "sistema_indicadores", from = "src" }]
+packages = [{include = "sistema-indicadores", from = "src" }]
 repository = "https://github.com/WolfangT/sistema_indicadores"
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -26,6 +26,8 @@ build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry-dynamic-versioning]
 enable = true
+vcs = "git"
+style = "semver"
 
 # Linting and formatign tools
 
