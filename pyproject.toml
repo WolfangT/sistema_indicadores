@@ -1,50 +1,33 @@
-[build-system]
-requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "sistema_indicadores"
+[tool.poetry]
+name = "sistema-indicadores"
+version = "0.0.0"
 description = "Sistema para control de recursos, actividades y muestra de indicadores"
+authors = ["Wolfang Torres <wolfang.torres@gmail.com>"]
+license = "GPL-3.0-or-later"
 readme = "README.md"
-requires-python = ">=3.11"
-license = {text = "Copyright Wolfang Torres 2023. All rights reserved."}
-authors = [
-  {name = "Wolfang Torres", email = "wolfang.torres@gmail.com"},
-]
-maintainers = [
-  {name = "Wolfang Torres", email = "wolfang.torres@gmail.com"},
-]
-classifiers = [
-  "Development Status :: 4 - Beta",
-  "Programming Language :: Python"
-]
-dependencies = [
-  "django",
-]
-dynamic = ["version"]
+packages = [{include = "sistema_indicadores", from = "src" }]
+repository = "https://github.com/WolfangT/sistema_indicadores"
+[tool.poetry.dependencies]
+python = "^3.11"
+Django = "^4.1.7"
 
-[project.optional-dependencies]
-dev = [
-  "pylint",
-  "sphinx",
-  "nose",
-  "flakehell",
-  "black",
-  "isort",
-]
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+pylint = "^2.16.2"
+Sphinx = "^6.1.3"
+isort = "^5.12.0"
+nose = "^1.3.7"
 
-# [project.urls]
-# homepage = ""
-# documentation = ""
-# repository = ""
+[build-system]
+requires = ["poetry-core", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+# Plugins
 
-[tool.setuptools_scm]
+[tool.poetry-dynamic-versioning]
+enable = true
 
-
-# Tools
+# Linting and formatign tools
 
 [tool.black]
 line-length = 88
@@ -60,8 +43,9 @@ exclude = '''
 '''
 
 [tool.isort]
+profile = "black"
 src_paths = ["scr"]
-skip_glob = [".git", "__pycache__", ".vscode", "*venv", "build", "dist", "old", "*.egg-info"]
+skip_glob = [".git", "__pycache__", ".vscode", "*venv", "build", "dist", "*.egg-info"]
 line_length = 88
 multi_line_output = 3
 include_trailing_comma = true
@@ -92,24 +76,3 @@ msg-template="{path}:{module}:{line}: [{msg_id}({symbol}), {obj}] {msg}"
 [tool.pylint.logging]
 logging-format-style="new"
 logging-modules="logging"
-
-[tool.flakehell]
-max_line_length = 88
-format = "grouped"
-show_source = false
-exclude = [
-    ".git",
-    "__pycache__",
-    ".vscode",
-    "*venv",
-    "build",
-    "dist",
-    "old",
-    "*.egg-info",
-]
-
-[tool.flakehell.plugins]
-mccabe = ["+C*"]
-pycodestyle = ["+E*", "+W*", "-E203", "-E501", "-W503"]
-pyflakes = ["+F*"]
-flake8-bugbear = ["+*", "+B950"]
