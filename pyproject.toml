@@ -23,6 +23,7 @@ mypy = "^1.0.0"
 refurb = "^1.12.0"
 pydocstyle = "^6.3.0"
 deptry = "^0.8.0"
+flake8 = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core", "poetry-dynamic-versioning"]
