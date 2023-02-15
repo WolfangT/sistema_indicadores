@@ -6,7 +6,7 @@ Application starting point
 # Standard Library
 import importlib.metadata
 
-DISTRIBUTION_METADATA = importlib.metadata.metadata("sistema-indicadores")
+DISTRIBUTION_METADATA = dict(importlib.metadata.metadata("sistema-indicadores"))
 
 print("hello world!")
 print("Data:")
