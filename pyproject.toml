@@ -71,9 +71,6 @@ import_heading_gto = "GTO"
 import_heading_localfolder = "Local"
 sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 
-[tool.pylint.messages_control]
-disable = "C0330, C0326"
-
 [tool.pylint.format]
 max-line-length = "88"
 
@@ -94,5 +91,3 @@ load = ["src"]
 python_version = "3.11"
 warn_return_any = true
 warn_unused_configs = true
-
-
