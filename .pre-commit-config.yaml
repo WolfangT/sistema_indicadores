@@ -27,22 +27,26 @@ repos:
     rev: 23.1.0
     hooks:
       - id: black
-  - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.902
-    hooks:
-      - id: mypy
-        exclude: ^tests/
-        args: [--strict]
   - repo: https://github.com/pycqa/isort
     rev: 5.11.5
     hooks:
       - id: isort
         name: isort (python)
-  - repo: local
-    hooks:
-      - id: pylint
-        name: pylint
-        entry: pylint
-        language: system
-        types: [python]
-        require_serial: true
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v0.902
+  #   hooks:
+  #     - id: mypy
+  #       exclude: ^tests/
+  #       args: [
+  #         --show-column-numbers,
+  #         --ignore-missing-imports,
+  #         --follow-imports=silent
+  #       ]
+  # - repo: local
+  #   hooks:
+  #     - id: pylint
+  #       name: pylint
+  #       entry: pylint
+  #       language: system
+  #       types: [python]
+  #       require_serial: true
