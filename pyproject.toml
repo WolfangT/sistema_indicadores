@@ -107,6 +107,5 @@ exclude = '/(venv|instance|test|\..*)/$'
 [tool.django-stubs]
 django_settings_module = "sistema_indicadores.settings"
 
-
 [tool.bandit]
 exclude_dirs = ["tests", "venv"]
