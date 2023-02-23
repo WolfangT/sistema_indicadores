@@ -1,6 +1,7 @@
-"""__init__.py.
+"""
+sistemas_indicadores.
 
-Application starting point
+Sistema para control de recursos, actividades y muestra de indicador
 """
 
 # Standard Library
