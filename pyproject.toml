@@ -69,11 +69,14 @@ case_sensitive = true
 length_sort = false
 balanced_wrapping = true
 atomic = true
+known_django="django"
+known_first_party = ["key_performance_indicators", "sistema_indicadores"]
 import_heading_stdlib = "Standard Library"
+import_heading_django = "django"
 import_heading_thirdparty = "Pip"
-import_heading_gto = "GTO"
+import_heading_firstparty = "Local"
 import_heading_localfolder = "Local"
-sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+sections = ["FUTURE", "STDLIB", "DJANGO", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 
 [tool.pylint.main]
 py-version = "3.11"

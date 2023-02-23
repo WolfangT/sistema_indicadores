@@ -10,7 +10,7 @@ def main():
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sistema_indicadores.settings")
     try:
         # pylint: disable=import-outside-toplevel
-        # Pip
+        # django
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(

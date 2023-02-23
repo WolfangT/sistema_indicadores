@@ -22,7 +22,7 @@
   },
   "python.testing.pytestArgs": [
     "tests/",
-    "src/polls/"
+    "src/"
   ],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true
