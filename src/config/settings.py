@@ -46,13 +46,14 @@ ALLOWED_HOSTS: list[str] = []
 # Application definition
 
 INSTALLED_APPS = [
-    "key_performance_indicators.apps.KeyPerformanceIndicatorsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
+    "sistema_indicadores.apps.SitemaIndicadoresConfig",
 ]
 
 MIDDLEWARE = [
@@ -65,7 +66,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "sistema_indicadores.urls"
+ROOT_URLCONF = "config.urls"
 
 TEMPLATES = [
     {
@@ -83,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "sistema_indicadores.wsgi.application"
+WSGI_APPLICATION = "config.wsgi.application"
 
 
 # Database

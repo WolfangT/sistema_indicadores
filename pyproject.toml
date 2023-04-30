@@ -11,6 +11,11 @@ repository = "https://github.com/WolfangT/sistema_indicadores"
 [tool.poetry.dependencies]
 python = "^3.11"
 Django = "^4.1.7"
+kpireport = "^0.1.8"
+djangorestframework = "^3.14.0"
+markdown = "^3.4.1"
+django-filter = "^22.1"
+factory-boy = "^3.2.1"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.0.4"
@@ -44,7 +49,7 @@ style = "semver"
 
 [tool.pytest.ini_options]
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
-DJANGO_SETTINGS_MODULE = "sistema_indicadores.settings"
+DJANGO_SETTINGS_MODULE = "config.settings"
 testpaths = ["tests", "src/*/"]
 
 # Linting and formatign tools
@@ -70,7 +75,7 @@ length_sort = false
 balanced_wrapping = true
 atomic = true
 known_django="django"
-known_first_party = ["key_performance_indicators", "sistema_indicadores"]
+known_first_party = ["sistema_indicadores", "sistema_indicadores"]
 import_heading_stdlib = "Standard Library"
 import_heading_django = "django"
 import_heading_thirdparty = "Pip"
@@ -94,7 +99,7 @@ logging-format-style="new"
 logging-modules="logging"
 
 [tool.pylint."django foreign keys referenced by strings"]
-django-settings-module = "sistema_indicadores.settings"
+django-settings-module = "config.settings"
 
 [tool.refurb]
 enable_all = true
@@ -108,7 +113,7 @@ plugins = ["mypy_django_plugin.main"]
 exclude = '/(venv|instance|test|\..*)/$'
 
 [tool.django-stubs]
-django_settings_module = "sistema_indicadores.settings"
+django_settings_module = "config.settings"
 
 [tool.bandit]
 exclude_dirs = ["tests", "venv"]

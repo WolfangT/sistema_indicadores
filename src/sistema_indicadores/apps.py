@@ -2,6 +2,6 @@
 from django.apps import AppConfig
 
 
-class KeyPerformanceIndicatorsConfig(AppConfig):
+class SitemaIndicadoresConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "key_performance_indicators"
+    name = "sistema_indicadores"

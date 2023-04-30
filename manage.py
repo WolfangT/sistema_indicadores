@@ -7,7 +7,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "sistema_indicadores.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
     try:
         # pylint: disable=import-outside-toplevel
         # django
